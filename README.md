@@ -1,6 +1,11 @@
 # Userly
 Quotes App created with Kotlin, Room Database, Navigation component, Dark mode.
 
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Screenshots](#screenshots)
+
 ## General Info
 Users - Users can login and register into app. After login user set their profile like upload profile photo, update their personal informartion.
 User can see number of quotes, they can read those quotes and give ratings to those quotes and comment their thoughts on that quotes.
@@ -15,3 +20,5 @@ The project is created with:
 * Android studio : 4.0
 * Backend : Kotlin : 1.3.41
 * frontend : Material Design (xml).
+
+## Screenshots
