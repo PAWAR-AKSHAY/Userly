@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.selfinfo">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".modules.ratings.RatingsActivity"/>
+        <activity android:name=".modules.adminDashboard.AdminDashboardActivity" />
+        <activity android:name=".modules.settings.SettingsActivity" />
+        <activity android:name=".modules.userProfile.ProfileActivity" />
+        <activity android:name=".modules.userDashboard.DashboardActivity" />
+        <activity
+            android:name=".modules.register.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.windowFullScreen" />
+        <activity
+            android:name=".modules.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.windowFullScreen" />
+        <activity
+            android:name=".modules.launcher.LauncherActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.windowFullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.selfinfo.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

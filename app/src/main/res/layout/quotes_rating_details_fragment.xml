@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.ratings.RatingsActivity"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/toolbarQuotesRatings"
+        layout="@layout/toolbar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txtQuotesMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/antic"
+                android:textSize="18sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:text="@string/message"/>
+
+            <TextView
+                android:id="@+id/txtQuotesMessageDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="?android:attr/textColorPrimary"
+                />
+
+            <TextView
+                android:id="@+id/txtQuotesAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/antic"
+                android:textSize="18sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:text="@string/author"/>
+
+            <TextView
+                android:id="@+id/txtQuotesAuthorDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                android:id="@+id/txtQuotesRatings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/antic"
+                android:textSize="18sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:text="@string/ratings"/>
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/quotesRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:numStars="5"
+                android:rating="1"/>
+
+            <TextView
+                android:id="@+id/txtQuotesComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/antic"
+                android:textSize="18sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:text="@string/comment"/>
+
+            <TextView
+                android:id="@+id/txtQuotesCommentDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:textColor="?android:attr/textColorPrimary" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>

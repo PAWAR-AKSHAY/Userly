@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbarDashboard"
+        layout="@layout/toolbar"
+        app:navigationIcon="@drawable/menu_icon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recQuotes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarDashboard"
+        android:clipToPadding="false"
+        tools:listitem="@layout/quotes_list"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"/>
+</RelativeLayout>

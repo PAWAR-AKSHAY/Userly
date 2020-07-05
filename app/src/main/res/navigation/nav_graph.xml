@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/usersFragment">
+
+    <fragment
+        android:id="@id/usersFragment"
+        android:name="com.example.selfinfo.modules.usersList.UsersFragment"
+        android:label="Users"
+        tools:layout="@layout/users_fragment" >
+        <action
+            android:id="@+id/action_usersFragment_to_userDetailsFragment"
+            app:destination="@id/userDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@id/quotesFragment"
+        android:name="com.example.selfinfo.modules.quotesList.QuotesFragment"
+        android:label="Quotes"
+        tools:layout="@layout/quotes_fragment" >
+        <action
+            android:id="@+id/action_quotesFragment_to_updateQuotesFragment"
+            app:destination="@id/updateQuotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailsFragment"
+        android:name="com.example.selfinfo.modules.userDetails.UserDetailsFragment"
+        android:label="User Details"
+        tools:layout="@layout/user_details_fragment">
+        <argument
+            android:name="userModel"
+            app:argType="com.example.selfinfo.models.database.UsersModel" />
+        <action
+            android:id="@+id/action_userDetailsFragment_to_quotesRatingDetailsFragment"
+            app:destination="@id/quotesRatingDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateQuotesFragment"
+        android:name="com.example.selfinfo.modules.updateQuotes.UpdateQuotesFragment"
+        android:label="Update Quote"
+        tools:layout="@layout/update_quotes_fragment" >
+        <argument
+            android:name="quoteModel"
+            app:argType="com.example.selfinfo.models.database.QuotesModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/quotesRatingDetailsFragment"
+        android:name="com.example.selfinfo.modules.quotesRatingDetails.QuotesRatingDetailsFragment"
+        android:label="Quotes Ratings"
+        tools:layout="@layout/quotes_rating_details_fragment" >
+        <argument
+            android:name="quotesModel"
+            app:argType="com.example.selfinfo.models.database.QuotesModel" />
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
