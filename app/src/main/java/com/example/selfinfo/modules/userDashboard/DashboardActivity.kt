@@ -18,6 +18,7 @@ import com.example.selfinfo.R
 import com.example.selfinfo.models.prefs.SharedPreferenceManager
 import com.example.selfinfo.modules.userProfile.ProfileActivity
 import com.example.selfinfo.modules.login.LoginActivity
+import com.example.selfinfo.modules.settings.SettingsActivity
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.dashboard_activity.*
 import kotlinx.android.synthetic.main.dashboard_content.*
@@ -96,9 +97,9 @@ class DashboardActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.menu_logout ->{
                exitDialog()
             }
-//            R.id.menu_settings ->{
-//                startActivity(Intent(context,SettingsActivity::class.java))
-//            }
+            R.id.menu_settings ->{
+                startActivity(Intent(context, SettingsActivity::class.java))
+            }
         }
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
